@@ -12,12 +12,18 @@ namespace Renderer
 		~ShaderProgram();
 
 		bool isCompiled() const { return m_isCompiled; }
-		
 		bool use() const;
 
+		ShaderProgram() = delete;
+		ShaderProgram(ShaderProgram&) = delete;
+		ShaderProgram& operator = (const ShaderProgram&) = delete;
+		ShaderProgram& operator = (ShaderProgram&& shaderProgram);
+		ShaderProgram(ShaderProgram&& shaderProgram);
+
 	private:
+		bool createShader(const std::string& source, const GLenum shaderType, GLuint& shaderID);
 		bool m_isCompiled = false;
-		GLuint m_ID;
+		GLuint m_ID = 0;
 	};
 }
 
