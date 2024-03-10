@@ -105,7 +105,7 @@ int main(void)
     glDeleteShader(vs);
     glDeleteShader(fs);
 
-    // Вертексные буфферы из ОЗУ перемещаем в память видюхи и все это в1 буффере vbo 
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ1 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ vbo 
     GLuint points_vbo = 0;
     glGenBuffers(1, &points_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, points_vbo);
@@ -129,9 +129,6 @@ int main(void)
     glBindBuffer(GL_ARRAY_BUFFER, colors_vbo);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
     
-
-
-
     while (!glfwWindowShouldClose(pWindow))
     {
         // Render here
